@@ -1,6 +1,5 @@
 import React from 'react'
 import { Card, CardBody, CardImg, CardImgOverlay, CardTitle } from 'reactstrap';
-import PropTypes from 'prop-types';
 
 const MenuItem = ({dish, onDishSelect}) => {
   return (
@@ -14,7 +13,7 @@ const MenuItem = ({dish, onDishSelect}) => {
             />
             <CardImgOverlay>
                 <CardTitle 
-                style={{cursor:"pointer"}}
+                style={{cursor:"pointer", textAlign:'center', fontWeight:'bolder', fontSize:'30px'}}
                 onClick={()=>onDishSelect(dish)}
                 >
                     {dish.name}
@@ -25,10 +24,5 @@ const MenuItem = ({dish, onDishSelect}) => {
     </div>
   )
 }
-MenuItem.propTypes = {
-    dish: PropTypes.shape({
-      image: PropTypes.string.isRequired,
-      name: PropTypes.string.isRequired,
-    }).isRequired,
-  };
+
 export default MenuItem
