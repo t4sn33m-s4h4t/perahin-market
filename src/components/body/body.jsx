@@ -1,9 +1,14 @@
 import React from 'react'
+import Menu from './menu'
 
-export default function Body() {
+const Body = () => {
+  
   return (
     <div>
+      <Menu />
       
     </div>
   )
 }
+
+export default Body
