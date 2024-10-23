@@ -6,7 +6,9 @@ const MainComponent = () => {
   return (
     <div>
       <Header></Header>
+      <div className="mb-5">
       <Body></Body>
+      </div>
       <Footer></Footer>
     </div>
   )

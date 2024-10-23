@@ -1,36 +1,67 @@
 import React, { useState } from 'react'
-import DISHES from '../../data/dishes'
 import MenuItem from './menuItem'
 import DishDetails from './dishDetails'
-
-const Menu = () => {
-    const [dishes, setDishes] = useState(DISHES)
+import title from '../../data/title'
+import { connect } from 'react-redux' 
+const mapStateToProps = state =>{
+  
+    return {
+      dishes: state.dishes,
+      comments: state.comments,
+    }
+  }
+  
+//   const mapDispatchToProps = (dispatch)=>{
+//     return {
+//         addComment: (dishId, rating, author, comment) =>{
+//             dispatch({
+//                 type: ADD_COMMENT,
+//                 payload: {
+//                     dishId: dishId,
+//                     author: author,
+//                     rating: rating,
+//                     comment: comment,
+    
+//                 }
+//             })
+//         }
+//     }
+//     }
+ 
+const Menu = ({dishes}) => {
+    document.title = title + 'Menu' 
     const [selectedDish, setselectedDish] = useState(null)
     function onDishSelect(dish) {
         setselectedDish(dish);
     }
-    return (
-        <div>
-            <div className="container">
-                <div className="row">
-                    <div className="col-6">
-                        {
-                            dishes.map(dish => <MenuItem
-                                onDishSelect={onDishSelect}
-                                key={dish.id}
-                                dish={dish}
-                            />
-                            )
-                        }
+    const menu = dishes.map(dish => {
+        return (
+            <MenuItem
+                onDishSelect={onDishSelect}
+                key={dish.id}
+                dish={dish}
+            />
+        )
+    }
+    )
 
-                    </div>
-                    <div className="col-6">
+
+
+
+return (
+    <div>
+        <div className="container">
+            <div className="row">
+            <div className="col-md-7">
+                {menu}
+            </div>
+            <div className="col-md-5">
                     {selectedDish && <DishDetails dish={selectedDish} />}
-                    </div>
-                </div>
+
+            </div>
             </div>
         </div>
-    )
+    </div>
+)
 }
-
-export default Menu
+export default connect(mapStateToProps) (Menu);

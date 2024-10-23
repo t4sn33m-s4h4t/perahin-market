@@ -4,8 +4,8 @@ import { Card, CardBody, CardImg, CardImgOverlay, CardTitle } from 'reactstrap';
 const MenuItem = ({dish, onDishSelect}) => {
   return (
     <div>
-      <Card style={{margin:"10px"}}>
-        <CardBody>
+      <Card  style={{margin:"10px"}}>
+        <CardBody >
             <CardImg 
             width="100%" 
             src={'/src/' + dish.image} 
