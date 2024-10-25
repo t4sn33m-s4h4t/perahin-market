@@ -1,1 +1,2 @@
-export const baseUrl = "http://localhost:5173/public/data/data.json";
+export const baseUrl = "https://dusty-girl.surge.sh/data/data.json";
+export const imgUrl = "/src/";

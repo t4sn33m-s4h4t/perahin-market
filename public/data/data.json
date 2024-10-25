@@ -3,7 +3,7 @@
   { 
       "id": 0,
       "name": "Ginger Burger",
-      "image": "assets/images/0burger.jpg",
+      "image": "0burger.jpg",
       "category": "meal",
       "label": "Hot",
       "price": "199",
@@ -13,7 +13,7 @@
   {
       "id": 1,
       "name": "BBQ Chicken Pizza",
-      "image": "assets/images/1pizza.jpg",
+      "image": "1pizza.jpg",
       "category": "meal",
       "label": "",
       "price": "599",
@@ -23,7 +23,7 @@
   {
       "id": 2,
       "name": "French Fries",
-      "image": "assets/images/2fries.jpg",
+      "image": "2fries.jpg",
       "category": "appetizer",
       "label": "New",
       "price": "120",
@@ -33,7 +33,7 @@
   {
       "id": 3,
       "name": "Cheese Cake",
-      "image": "assets/images/3cake.jpg",
+      "image": "3cake.jpg",
       "category": "dessert",
       "label": "",
       "price": "170",
