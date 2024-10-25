@@ -10,7 +10,7 @@ const Navigation = () => {
       <Navbar className="my-2" color="dark" dark expand="sm">
         <div className="container d-flex align-items-center justify-content-center">
           <NavbarBrand tag={NavLink} to="/" exact='true'>
-            Perahin Market
+            Perahin Restaurant
           </NavbarBrand>
 
           <Collapse isOpen={isNavOpen} navbar>
